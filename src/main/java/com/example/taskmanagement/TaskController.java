@@ -25,7 +25,7 @@ public class TaskController {
         Task task = new Task();
 
         if (status != null) {
-            taskList = taskRepository.findByStatus(status);
+            taskList = taskRepository.findByStatusOrderByDeadlineAsc(status);
         } else {
             taskList = taskRepository.findAll();
         }
