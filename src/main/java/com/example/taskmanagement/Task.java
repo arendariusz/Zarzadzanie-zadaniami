@@ -1,5 +1,7 @@
 package com.example.taskmanagement;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.*;
 import java.time.LocalDate;
 
@@ -11,10 +13,12 @@ public class Task {
     private long id;
 
     private String title;
+
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate deadline;
 
     @Enumerated(EnumType.STRING)
-    private Status isRealized;
+    private Status status;
 
     public long getId() {
         return id;
@@ -40,11 +44,11 @@ public class Task {
         this.deadline = deadline;
     }
 
-    public Status getIsRealized() {
-        return isRealized;
+    public Status getStatus() {
+        return status;
     }
 
-    public void setIsRealized(Status isRealized) {
-        this.isRealized = isRealized;
+    public void setStatus(Status isRealized) {
+        this.status = isRealized;
     }
 }

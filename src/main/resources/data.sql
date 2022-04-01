@@ -1,4 +1,4 @@
-INSERT INTO TASK (title, deadline, isRealized)
+INSERT INTO TASK (title, deadline, status)
 VALUES
 ('Wysłać paczkę', '2022-04-01', 'NOT_REALIZED'),
 ('PRZYGOTOWAĆ RAPORT', '2022-03-27', 'REALIZED'),

@@ -1,5 +1,15 @@
 package com.example.taskmanagement;
 
 public enum Status {
-    REALIZED, NOT_REALIZED
+    REALIZED("Zrealizowano"), NOT_REALIZED("Do realizacji");
+
+    private String statusName;
+
+    Status(String statusName) {
+        this.statusName = statusName;
+    }
+
+    public String getStatusName() {
+        return statusName;
+    }
 }
